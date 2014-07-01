@@ -3,4 +3,3 @@
       x
       (* x (fact (- x 1)))))
 
-(display (fact 6))
