@@ -5,7 +5,13 @@
       0
       (+ (term a)
          (sum term (next a) next b))))
-
+;; sum for iterator version
+(define (iter-sum term a next b)
+  (define (iter a result)
+    (if (> a b)
+      result
+      (iter (next a) (+ (term a) result))))
+  (iter a 0))
 ;calc pi how to?
 (define (pi-sum a b)
   (define (pi-term x)
