@@ -8,8 +8,7 @@
 ;;  如果 f(x) < 0 则继续在x、b之间查找
 ;;  如果 f(x) > 0 则继续在a、x之间查找
 ;;  否则 返回x
-;;  注意：这里必须保证test-value不能同时为正或者负数
-
+;;  注意：这里必须保证f(a), f(b)不能同时为正或者负数
 
 (define (search f neg-point pos-point)
   (let ((mid-point (average neg-point pos-point)))
